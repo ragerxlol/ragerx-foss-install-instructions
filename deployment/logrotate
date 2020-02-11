@@ -1,0 +1,23 @@
+/home/pool/ragerx-foss-frontend-api/logs/api.log {
+  rotate 12
+  daily
+  compress
+  missingok
+  notifempty
+  create 640 pool pool
+  postrotate
+    /bin/kill -s SIGHUP `cat /home/pool/ragerx-foss-frontend-api/api.pid`
+  endscript
+}
+
+/home/pool/ragerx-foss-payoutd/logs/*.log {
+  rotate 12
+  daily
+  compress
+  missingok
+  notifempty
+  create 640 pool pool
+  postrotate
+    /bin/kill -s SIGHUP `cat /home/pool/ragerx-foss-payoutd/payoutd.pid`
+  endscript
+}

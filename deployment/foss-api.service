@@ -1,0 +1,16 @@
+[Unit]
+Description=Pool API
+After=network.target
+
+[Service]
+User=pool
+Group=pool
+WorkingDirectory=/home/pool/ragerx-foss-frontend-api
+Type=simple
+LimitNOFILE=65535
+Environment=NODE_VERSION=12
+ExecStart=/home/pool/.nvm/nvm-exec node dist/index.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

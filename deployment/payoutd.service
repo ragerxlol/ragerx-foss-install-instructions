@@ -1,0 +1,15 @@
+[Unit]
+Description=Payout script
+After=network.target
+
+[Service]
+User=pool
+Group=pool
+WorkingDirectory=/home/pool/ragerx-foss-payoutd
+Type=simple
+LimitNOFILE=65535
+ExecStart=/home/pool/.local/bin/pipenv run python3 main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
