@@ -13,7 +13,7 @@ sudo useradd -s /usr/sbin/nologin -rm pool
 
 ### Postgres
 
-RagerX uses postgres as its database, so first you'll need to install it and set up a new user / database. The below assumes you will use set up a user and database with the name `monero_foss` and password `password`. Make sure to change these values!
+RagerX uses postgres as its database, so first you'll need to install it and set up a new user / database. The below assumes you will set up a user and database with the name `monero_foss` and password `password`. Make sure to change these values!
 
 ```
 sudo apt install postgresql
