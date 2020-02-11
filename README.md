@@ -2,6 +2,8 @@
 
 This repo outlines the steps to set up a RagerX compatible pool. You should contact the RagerX team through [Telegram](https://t.me/ragerxlol) or [Reddit](https://reddit.com/r/ragerx) before proceeding with this guide.
 
+![RagerX Flasher](RagerX-Flasher.png?raw=true "RagerX Flasher")
+
 ## Basics
 
 ### Linux User Account
