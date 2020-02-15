@@ -50,7 +50,12 @@ As well as allow authentication to the database by password from the main ragerx
 ```
 sudo nano /etc/postgresql/10/main/pg_hba.conf
 
-host monero_pplnspool monero_pplnspool 81.19.208.43/32 md5
+host monero_foss monero_foss 81.19.208.43/32 md5
+```
+
+Then restart postgres:
+```
+sudo systemctl restart postgresql
 ```
 
 ### Node.js
@@ -159,7 +164,7 @@ You should also use `certbot` to obtain an SSL/TLS certificate. Refer to [this g
 
 ### iptables / ufw
 
-While not covered in this README, you should also set up a firewall. The final pool will only need 80 / 443 open.
+While not covered in this README, you should also set up a firewall. The final pool will need 80, 443, and 5432 open. Note: make sure to also allow port 22 for ssh connections.
 
 ### Logrotate
 
